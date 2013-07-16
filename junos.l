@@ -36,7 +36,7 @@ int oldstate;
     return STRING;
 };
 
-[[:alnum:]\[\]\<][^ ^\t^;^\r^\n]* {
+[[:alnum:]\[\]\<\*][^ ^\t^;^\r^\n]* {
   yylval=strdup(yytext); /* Do not identify array here because it has no syntax value */
   return WORD;
 };
