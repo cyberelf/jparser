@@ -31,6 +31,10 @@ int oldstate;
   return SEMICOLON;
 }
 
+"inactive:" {
+  return INACTIVE;
+}
+
 \"(\\.|[^"])*\" {
     yylval=strdup(yytext);
     return STRING;
